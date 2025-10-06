@@ -54,8 +54,14 @@ php artisan serve
 | ORM | Eloquent ORM |
 | API Testing | Postman |
 
-Mockup APIs (ตัวอย่างทั้งหมด)
 
+Authentication
+ระบบใช้ Laravel Sanctum
+หลังจาก login แล้วจะได้รับ Token
+ให้ส่ง token ใน Auth Type แบบนี้เวลาเรียก API
+Authorization: Bearer <token>
+
+Mockup APIs (ตัวอย่างทั้งหมด)
 Register (สมัครสมาชิก)
 Method: POST
 URL: /api/register
