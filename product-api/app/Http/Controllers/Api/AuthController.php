@@ -10,10 +10,8 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 class AuthController extends Controller
 {
-    // ฟังก์ชันสมัครสมาชิก
     public function register(Request $request)
     {
-        // ตรวจสอบ Validation
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email',
@@ -27,7 +25,6 @@ class AuthController extends Controller
             ], 422);
         }
 
-        // สร้างสมาชิกใหม่
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
