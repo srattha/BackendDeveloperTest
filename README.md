@@ -1,5 +1,31 @@
-# 🛍️ Laravel Product Review API
 
+---
+
+## ⚙️ Installation
+
+```bash
+#Clone Project
+git clone https://github.com/srattha/BackendDeveloperTest.git
+cd product-api
+
+#Install Dependencies
+composer install
+
+#Create Environment File
+cp .env.example .env
+
+#Setup Database
+# (ตั้งค่าฐานข้อมูล MySQL ในไฟล์ .env)
+php artisan migrate 
+
+#Generate App Key
+php artisan key:generate
+
+#Run Development Server
+php artisan serve
+
+
+# 🛍️ Laravel Product Review API
 ระบบตัวอย่างสำหรับแสดงสินค้า (Product Listing) พร้อมระบบสมาชิก (User System)  
 และให้สมาชิกสามารถเขียนรีวิวสินค้า (Review System) ได้ไม่จำกัดจำนวนครั้ง  
 สร้างด้วย **Laravel Framework + MySQL** โดยยึดตามหลัก **MVC Pattern**
@@ -26,8 +52,14 @@
 | ORM | Eloquent ORM |
 | API Testing | Postman |
 
-Mockup APIs (ตัวอย่างทั้งหมด)
 
+Authentication
+ระบบใช้ Laravel Sanctum
+หลังจาก login แล้วจะได้รับ Token
+ให้ส่ง token ใน Auth Type แบบนี้เวลาเรียก API
+Authorization: Bearer <token>
+
+Mockup APIs (ตัวอย่างทั้งหมด)
 Register (สมัครสมาชิก)
 Method: POST
 URL: /api/register
@@ -157,4 +189,3 @@ Response:
     "status": "success",
     "data": []
 }
-
