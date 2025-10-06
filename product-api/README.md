@@ -4,27 +4,25 @@
 ## ⚙️ Installation
 
 ```bash
-# 1️⃣ Clone Project
+#Clone Project
 git clone https://github.com/srattha/BackendDeveloperTest.git
 cd product-api
 
-# 2️⃣ Install Dependencies
+#Install Dependencies
 composer install
 
-# 3️⃣ Create Environment File
+#Create Environment File
 cp .env.example .env
 
-# 4️⃣ Setup Database
+#Setup Database
 # (ตั้งค่าฐานข้อมูล MySQL ในไฟล์ .env)
 php artisan migrate 
 
-# 5️⃣ Generate App Key
+#Generate App Key
 php artisan key:generate
 
-# 6️⃣ Run Development Server
+#Run Development Server
 php artisan serve
-
-
 
 
 # 🛍️ Laravel Product Review API
