@@ -10,7 +10,7 @@ use App\Models\User;
 
 class ReviewController extends Controller
 {
-    
+
     public function store(Request $request, $productId)
     {
         $request->validate([
@@ -69,7 +69,7 @@ class ReviewController extends Controller
             ], 404);
         }
 
-        $reviews = $user->reviews->map(function($review) {
+        $reviews = $user->reviews->map(function ($review) {
             return [
                 'id' => $review->id,
                 'product' => [
@@ -86,5 +86,4 @@ class ReviewController extends Controller
             'data' => $reviews
         ]);
     }
-
 }
