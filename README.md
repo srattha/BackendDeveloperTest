@@ -6,6 +6,7 @@
 ```bash
 #Clone Project
 git clone https://github.com/srattha/BackendDeveloperTest.git
+cd BackendDeveloperTest
 cd product-api
 
 #Install Dependencies
